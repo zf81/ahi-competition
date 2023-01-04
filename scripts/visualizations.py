@@ -16,7 +16,7 @@ age = px.bar(df, x= 'patient_age', y=['appointment_yosi_noshow1'], color= 'appoi
 st.plotly_chart(age)
 
 st.subheader("Weather Conditions vs Show Status")
-weather = px.bar(df, x=['weather_conditions'], y=['appointment_yosi_noshow1'], barmode='group', height=400)
+weather = px.bar(df, x='weather_conditions', y=['appointment_yosi_noshow1'], barmode='group', height=400)
 st.plotly_chart(weather) 
 
 st.subheader('Appointment Type vs Appointment Show Status')
@@ -24,5 +24,5 @@ type = px.bar(df, x= 'appointment_type', y=['appointment_yosi_noshow1'], color= 
 st.plotly_chart(type)
 
 st.subheader('Location vs Show Status')
-location = px.bar(df, x=['geocode_city','geocode_county'], y=['appointment_yosi_noshow1'], barmode='group', height=400)
+location = px.bar(df, x='geocode_city', y=['appointment_yosi_noshow1'], barmode='group', height=400)
 st.plotly_chart(location) 
